@@ -19,7 +19,7 @@ Implemented animations:
       body: ListView.builder(
         itemCount: 32,
         itemBuilder: (context, index) {
-			return WidgetAnimator(
+            return WidgetAnimator(
               duration: Duration(milliseconds: 1000), // Optional, defaults to 290ms
               child: ListTile(
                 title: Text('Item $index'),
