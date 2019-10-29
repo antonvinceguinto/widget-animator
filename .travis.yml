@@ -1,23 +1,19 @@
 language: dart
 
 dart:
-  - dev
-  - 2.4.0
+  - stable
 
 dart_task:
   - test: --platform vm
-  # No parallelism on Firefox (-j 1)
-  # Causes flakiness – need to investigate
-  - test: --platform firefox -j 1
-  - dartanalyzer: --fatal-warnings lib/*.dart
+  - dartanalyzer: --fatal-warnings lib
 
 install:
   - echo 'Avoid default Travis CI install step' # this is to avoid an error with pub in Travis
 
 matrix:
   include:
-    # Only validate formatting using the dev release
-    - dart: dev
+    # Only validate formatting using the stable release
+    - dart: stable
       dart_task: dartfmt
 
 # Only building master means that we don't run two builds for each pull request.
