@@ -4,7 +4,7 @@ dart:
   - stable
 
 dart_task:
-  - test: --platform vm
+  - test
   - dartanalyzer: --fatal-warnings lib
 
 install:
