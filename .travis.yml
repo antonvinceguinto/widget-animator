@@ -11,6 +11,9 @@ dart_task:
   - test: --platform firefox -j 1
   - dartanalyzer: --fatal-infos --fatal-warnings .
 
+install:
+  - echo 'Avoid default Travis CI install step' # this is to avoid an error with pub in Travis
+
 matrix:
   include:
     # Only validate formatting using the dev release
