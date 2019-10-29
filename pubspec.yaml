@@ -1,8 +1,8 @@
-name: fast_listview_animation
-description: Flutter package for easily implementing animations on how the items in the list appear
-version: 0.0.1
-author: Anton Vince Guinto <dev.antonguinto@gmail.com>
-homepage: https://github.com/antonvinceguinto/fast-listview-animation
+name: widget_animator
+description: Animate your widgets fast and easy
+version: 0.0.2
+author: dev-anton.engineer <dev.antonguinto@gmail.com>
+homepage: https://github.com/antonvinceguinto/widget-animator
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

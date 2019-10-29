@@ -16,37 +16,37 @@ class Animator extends StatefulWidget {
 
 class _AnimatorState extends State<Animator>
     with SingleTickerProviderStateMixin {
-  Timer timer;
-  AnimationController animationController;
-  Animation animation;
+  Timer _timer;
+  AnimationController _animationController;
+  Animation _animation;
 
   @override
   void initState() {
     super.initState();
-    animationController =
+    _animationController =
         AnimationController(duration: widget.duration, vsync: this);
-    animation =
-        CurvedAnimation(parent: animationController, curve: Curves.easeInOut);
-    timer = Timer(widget.time, animationController.forward);
+    _animation =
+        CurvedAnimation(parent: _animationController, curve: Curves.easeInOut);
+    _timer = Timer(widget.time, _animationController.forward);
   }
 
   @override
   void dispose() {
     super.dispose();
-    timer.cancel();
-    animationController.dispose();
+    _timer.cancel();
+    _animationController.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: animation,
+      animation: _animation,
       child: widget.child,
       builder: (BuildContext context, Widget child) {
         return Opacity(
-          opacity: animation.value,
+          opacity: _animation.value,
           child: Transform.translate(
-            offset: Offset(0.0, (1 - animation.value) * 20),
+            offset: Offset(0.0, (1 - _animation.value) * 20),
             child: child,
           ),
         );
@@ -59,15 +59,18 @@ class WidgetAnimator extends StatelessWidget {
   final Widget child;
   final Duration duration;
 
-  WidgetAnimator({@required this.child, this.duration = const Duration(milliseconds: 290)});
+  /*
+   * Duration is optional, by default is set to 290ms,
+   * coz best practice is 290ms *wink*
+   */
+  WidgetAnimator({
+    this.duration = const Duration(milliseconds: 290),
+    @required this.child,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Animator(
-      child,
-      wait(),
-      duration: duration,
-    );
+    return Animator(child, wait(), duration: duration);
   }
 
   Duration wait() {

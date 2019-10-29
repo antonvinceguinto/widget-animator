@@ -1,6 +1,7 @@
-# Fast Listview Animation
+# Widget Animator
 
-Flutter package for easily implementing animations in list.
+Animate your widgets easily with this package!
+This works well on your listView items
 
 Implemented animations:
 * [x] Fade Transition
