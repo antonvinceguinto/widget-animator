@@ -1,7 +1,8 @@
 language: dart
 
 dart:
-  - stable
+  - dev
+  - 2.4.0
 
 dart_task:
   - test: --platform vm
