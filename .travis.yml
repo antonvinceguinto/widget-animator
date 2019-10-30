@@ -7,10 +7,10 @@ services:
   - docker
 
 before_install:
-  - docker pull carlad/sinatra
+  - docker pull jro7/flutter_lcov
   - docker run -d -p 127.0.0.1:80:4567 carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec foreman start;"
   - docker ps -a
-  - docker run carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec rake test"
+  - docker run jro7/flutter_lcov /bin/sh -c "cd /root/flutter_lcov; bundle exec rake test"
 
 addons:
   apt:
@@ -24,6 +24,7 @@ before_script:
   - git clone https://github.com/flutter/flutter.git
   
 script:
+  - bundle exec rake test
   - ./flutter/bin/flutter analyze
   - ./flutter/bin/flutter test --coverage
 cache:
