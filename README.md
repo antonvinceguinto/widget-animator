@@ -1,6 +1,6 @@
 # Widget Animator
 [![Build Status](https://travis-ci.org/antonvinceguinto/widget-animator.svg?branch=master)](https://travis-ci.org/antonvinceguinto/widget-animator)
-[![Build Status](https://img.shields.io/badge/pub-v0.0.2-green)](#)
+[![Build Status](https://img.shields.io/badge/pub-v1.0.0+1-green)]()
 
 This package helps you to easily animate your widgets with just a few steps.
 

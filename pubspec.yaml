@@ -1,5 +1,5 @@
 name: widget_animator
-description: Animate your widgets fast and easy with this package. Just wrap ANY widgets that you'd like to animate and wallah, your widget is now animating. You can customize how long the animation runs and what type of animation you preffer.
+description: Animate your widgets fast and easy with this package. Just wrap ANY widgets that you'd like to animate and wallah, your widget is now animating.
 version: 1.0.0+1
 author: dev-anton.engineer <dev.antonguinto@gmail.com>
 homepage: https://github.com/antonvinceguinto/widget-animator
