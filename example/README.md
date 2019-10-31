@@ -1,16 +1,6 @@
-# Widget Animator
-[![Build Status](https://travis-ci.org/antonvinceguinto/widget-animator.svg?branch=master)](https://travis-ci.org/antonvinceguinto/widget-animator)
-[![Build Status](https://img.shields.io/badge/pub-v0.0.2-green)](#)
+# widget_animator_example
 
-This package helps you to easily animate your widgets with just a few steps.
-
-This works well on your ListView items and... actually all of your widgets!
-
-# Demo
-
-![](demo.gif)
-
-# Using
+Demonstrates how to use the [widget animator plugin](https://github.com/antonvinceguinto/widget-animator)
 
 ```dart
  return Scaffold(
@@ -29,3 +19,8 @@ This works well on your ListView items and... actually all of your widgets!
       ),
     );
 ```
+
+## Getting Started
+
+For help getting started with Flutter, view the online
+[documentation](https://flutter.io/)
