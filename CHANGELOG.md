@@ -13,3 +13,7 @@
 ## [1.0.0+1] - October 31, 2019
 
 * Updated description
+
+## [1.0.0+2] - October 31, 2019
+
+* Updated description
