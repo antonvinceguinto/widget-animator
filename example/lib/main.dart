@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'widget_animator.dart';
+import 'package:widget_animator/widget_animator.dart';
 
 void main() => runApp(MyApp());
 
