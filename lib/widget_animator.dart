@@ -1,5 +1,3 @@
-library fast_listview_animation;
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 
@@ -7,8 +5,9 @@ class Animator extends StatefulWidget {
   final Widget child;
   final Duration time;
   final Duration duration;
+  final Curve curves;
 
-  Animator(this.child, this.time, {this.duration});
+  Animator(this.child, this.time, {this.duration, this.curves});
 
   @override
   _AnimatorState createState() => _AnimatorState();
@@ -26,7 +25,7 @@ class _AnimatorState extends State<Animator>
     _animationController =
         AnimationController(duration: widget.duration, vsync: this);
     _animation =
-        CurvedAnimation(parent: _animationController, curve: Curves.easeInOut);
+        CurvedAnimation(parent: _animationController, curve: widget.curves);
     _timer = Timer(widget.time, _animationController.forward);
   }
 
@@ -58,6 +57,7 @@ class _AnimatorState extends State<Animator>
 class WidgetAnimator extends StatelessWidget {
   final Widget child;
   final Duration duration;
+  final Curve curve;
 
   /*
    * Duration is optional, by default is set to 290ms,
@@ -65,12 +65,18 @@ class WidgetAnimator extends StatelessWidget {
    */
   WidgetAnimator({
     this.duration = const Duration(milliseconds: 290),
+    this.curve = Curves.bounceInOut,
     @required this.child,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Animator(child, wait(), duration: duration);
+    return Animator(
+      child,
+      wait(),
+      duration: duration,
+      curves: curve,
+    );
   }
 
   Duration wait() {
