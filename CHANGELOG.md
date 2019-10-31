@@ -9,3 +9,7 @@
 ## [1.0.0] - October 31, 2019
 
 * Implemented the core features
+
+## [1.0.0+1] - October 31, 2019
+
+* Updated description
