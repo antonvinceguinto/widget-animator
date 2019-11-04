@@ -54,6 +54,18 @@ class _AnimatorState extends State<Animator>
   }
 }
 
+Timer timer;
+Duration duration = Duration();
+Duration _wait() {
+  if (timer == null || !timer.isActive) {
+    timer = Timer(Duration(microseconds: 120), () {
+      duration = Duration();
+    });
+  }
+  duration += Duration(milliseconds: 100);
+  return duration;
+}
+
 class WidgetAnimator extends StatelessWidget {
   final Widget child;
   final Duration duration;
@@ -65,7 +77,7 @@ class WidgetAnimator extends StatelessWidget {
    */
   WidgetAnimator({
     this.duration = const Duration(milliseconds: 290),
-    this.curve = Curves.bounceInOut,
+    this.curve = Curves.easeInOut,
     @required this.child,
   });
 
@@ -73,22 +85,9 @@ class WidgetAnimator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Animator(
       child,
-      wait(),
+      _wait(),
       duration: duration,
       curves: curve,
     );
-  }
-
-  Duration wait() {
-    Timer timer;
-    Duration duration = Duration();
-
-    if (timer == null || !timer.isActive) {
-      timer = Timer(Duration(microseconds: 120), () {
-        duration = Duration();
-      });
-    }
-    duration += Duration(milliseconds: 100);
-    return duration;
   }
 }

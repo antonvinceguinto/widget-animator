@@ -36,7 +36,6 @@ class MyHomePage extends StatelessWidget {
                 children: <Widget>[
                   for (int i = 1; i <= 3; i++) ...[
                     WidgetAnimator(
-                      duration: Duration(seconds: i),
                       child: FloatingActionButton(
                         elevation: 0,
                         backgroundColor: Colors.black87,
@@ -55,8 +54,6 @@ class MyHomePage extends StatelessWidget {
           }
 
           return WidgetAnimator(
-            curve: Curves.easeIn,
-            duration: Duration(milliseconds: 590),
             child: ListTile(
               title: Text('Wiget Animator is fun $i'),
               subtitle: Text('Easy animations $i'),

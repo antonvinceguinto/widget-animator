@@ -17,3 +17,7 @@
 ## [1.0.0+2] - October 31, 2019
 
 * Updated description
+
+## [1.0.0+3] - November 4, 2019
+
+* Minor bug fixes
