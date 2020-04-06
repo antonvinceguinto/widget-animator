@@ -21,3 +21,7 @@
 ## [1.0.0+3] - November 4, 2019
 
 * Minor bug fixes
+
+## [1.0.0+4] - November 4, 2019
+
+* Fixed memory leak
