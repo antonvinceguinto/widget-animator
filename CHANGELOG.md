@@ -22,6 +22,6 @@
 
 * Minor bug fixes
 
-## [1.0.0+5] - April 6, 2020
+## [1.0.0+7] - April 6, 2020
 
 * Fixed memory leak
