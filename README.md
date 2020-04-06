@@ -1,6 +1,6 @@
 # Widget Animator
 [![Build Status](https://travis-ci.org/antonvinceguinto/widget-animator.svg?branch=master)](https://travis-ci.org/antonvinceguinto/widget-animator)
-[![Build Status](https://img.shields.io/badge/pub-v1.0.0+1-green)]()
+[![Build Status](https://img.shields.io/badge/pub-v1.0.0+5-green)]()
 
 This package helps you to easily animate your widgets with just a few steps.
 
@@ -30,4 +30,4 @@ This works well on your ListView items and... actually all of your widgets!
     );
 ```
 
-https://antonguinto.com
+Check me out: https://antonguinto.com
