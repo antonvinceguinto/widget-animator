@@ -1,18 +1,14 @@
 name: widget_animator
-description: Animate your widgets fast and easy with this package. Just wrap ANY widgets that you'd like to animate and wallah, your widget is now animating.
-version: 1.0.0+7
+version: 1.0.0+9
 homepage: https://github.com/antonvinceguinto/widget-animator
-
+publish_to: https://onepub.dev/api/uudavuhnof/
+description: Animate your widgets fast and easy with this package. Just wrap ANY widgets that you'd like to animate and wallah, your widget is now animating.
 environment:
-  sdk: ">=2.1.0 <3.0.0"
-
+  sdk: '>=2.1.0 <3.0.0'
 dependencies:
   flutter:
     sdk: flutter
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-flutter:
-
+flutter: null
